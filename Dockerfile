@@ -3,7 +3,6 @@ RUN	apt-get update && \
 	apt-get -y install lxde-core lxterminal xrdp iceweasel && \
 	apt-get clean && \
 	apt-get -y remove && \
-	rm $FILE && \
 	ln -s /usr/share/doc/xrdp/rsakeys.ini /etc/xrdp && \
 	useradd -ms /bin/bash myroot && \
 	echo 'user:password' |chpasswd
