@@ -4,7 +4,7 @@ RUN	apt-get update && \
 	apt-get clean && \
 	apt-get -y remove && \
 	ln -s /usr/share/doc/xrdp/rsakeys.ini /etc/xrdp && \
-	useradd -ms /bin/bash myroot && \
+	useradd -ms /bin/bash user && \
 	echo 'user:password' |chpasswd
 EXPOSE 3389
 ENTRYPOINT /etc/init.d/xrdp start && tail -F /var/log/xrdp-sesman.log
